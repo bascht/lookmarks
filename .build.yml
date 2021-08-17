@@ -14,3 +14,4 @@ tasks:
       cd lookmarks
       go install
       go build
+      go test
