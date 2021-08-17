@@ -77,3 +77,7 @@ will generate URLs for:
 - gitlab-gl-infra-issues-mine
 - gitlab-gl-infra-merge_requests
 - […] _you probably see where this is going…_
+
+which you can then use to feed them into the tool of your choice, say `fzf` for example:
+
+![screencap](./lookmarks-with-fzf.gif)
