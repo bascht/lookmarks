@@ -1,5 +1,7 @@
 # Lookmarks
 
+[![builds.sr.ht status](https://builds.sr.ht/~bascht/lookmarks.svg)](https://builds.sr.ht/~bascht/lookmarks?)
+
 Quick helper utility initially prototyped with
 [Lucas](https://github.com/moonglum/) to generate a lookup list of commonly used
 URLs from a standard Yaml file.
