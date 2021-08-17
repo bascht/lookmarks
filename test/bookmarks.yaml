@@ -1,0 +1,60 @@
+---
+gitlab_layout: &gitlab
+  - url: "issues"
+    key: "issues"
+    sub:
+    - url: "%{s}"
+      key: jump
+    - url: "?scope=all&state=opened&assignee_username=bascht"
+      key: mine
+    - url: "new"
+      key: create
+  - url: pipelines
+    key: pipelines
+  - url: merge_requests
+    key: mr
+  - url: wikis
+    key: wikis
+  - url: tags
+    key: tags
+gitlab_layout_without_issues: &gitlab_without_issues
+  - url: pipelines
+    key: pipelines
+  - url: merge_requests
+    key: mr
+  - url: wikis
+    key: wikis
+  - url: tags
+    key: tags
+github_layout: &github
+  - url: "issues"
+    key: issues
+    sub:
+    - url: "%{s}"
+      key: jump
+    - url: "?q=assignee%3Abascht+is%3Aopen"
+      key: mine
+  - url: /pulls
+    key: pr
+  - url: /wiki
+    key: wiki
+  - url: "/search?q=%{s}"
+    key: search
+
+bookmarks:
+  - key: bascht
+    url: https://bascht.com
+    sub:
+      - url: test1
+        key: test1
+      - url: test2
+        key: test2
+        sub:
+          - url: testnested
+            key: testnested
+      - url: testwithout
+        sub:
+          - url: anykeys
+  - key: gitlab
+    url: https://gitlab.com/gitlab-org/gitlab
+    sub: *gitlab
