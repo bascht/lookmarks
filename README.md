@@ -15,18 +15,19 @@ bookmarks:
     sub:
       - url: foo
       - url: bar
-      - url: baz
-        key: alias
+      - sub:
+        - url: baz
+          key: alias
 ```
 
 Will generate the following lookup table:
 
-| key           | value                     |
-|---------------|---------------------------|
-| example       | https://example.com       |
-| example-foo   | https://example.com/foo   |
-| example-bar   | https://example.com/bar   |
-| example-alias | https://example.com/alias |
+| key               | value                       |
+|-------------------|-----------------------------|
+| example           | https://example.com         |
+| example-foo       | https://example.com/foo     |
+| example-bar       | https://example.com/bar     |
+| example-bar-alias | https://example.com/bar/baz |
 
 
 While this might not look that impressive on first sight, think about the possibilities for e.g. modelling GitLab's URL structure for a few different repositories by simply defining a few Yaml anchors and letting `lookmarks` take care of the rest:
